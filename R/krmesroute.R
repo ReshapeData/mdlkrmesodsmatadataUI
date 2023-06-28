@@ -12,13 +12,13 @@
 #' @export
 #'
 #' @examples
-#' jhhrvodsmiddleTableUI()
+#' jhhrvodsmatadatamiddleTableUI()
 
-krmesrouteodsUI <- function(tabTitle ='工艺路线',
+krmesrouteodsmatadataUI <- function(tabTitle ='工艺路线',
                     colTitles =c('操作区','显示区域'),
                     widthRates =c(4, 8),
-                    func_left = buttonkrmesrouteodsUI_left,
-                    func_right =buttonkrmesrouteodsUI_right
+                    func_left = buttonkrmesrouteodsmatadataUI_left,
+                    func_right =buttonkrmesrouteodsmatadataUI_right
 ) {
 
   
@@ -34,12 +34,12 @@ krmesrouteodsUI <- function(tabTitle ='工艺路线',
 #'
 #' @examples
 #' buttonUI_left()
-buttonkrmesrouteodsUI_left <- function() {
+buttonkrmesrouteodsmatadataUI_left <- function() {
 
 
   res <- tagList(
 
-    shiny::actionButton(inputId = 'btn_krmesrouteods_view' , label = '预览表单数据'),
+    shiny::actionButton(inputId = 'btn_krmesrouteodsmatadata_view' , label = '预览表单数据'),
 
 
   )
@@ -58,9 +58,9 @@ buttonkrmesrouteodsUI_left <- function() {
 #'
 #' @examples
 #' buttonUI_right()
-buttonkrmesrouteodsUI_right <- function() {
+buttonkrmesrouteodsmatadataUI_right <- function() {
   res <- tagList(
-    tsui::uiScrollX(tsui::mdl_dataTable(id = 'krmesrouteods_view_data', label = '出口'))
+    tsui::uiScrollX(tsui::mdl_dataTable(id = 'krmesrouteodsmatadata_view_data', label = '出口'))
   )
   return(res)
 

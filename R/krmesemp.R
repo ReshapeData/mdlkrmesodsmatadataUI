@@ -12,13 +12,13 @@
 #' @export
 #'
 #' @examples
-#' krmesempodsUI()
+#' krmesempodsmatadataUI()
 
-krmesempodsUI <- function(tabTitle ='员工',
+krmesempodsmatadataUI <- function(tabTitle ='员工',
                     colTitles =c('操作区','显示区域'),
                     widthRates =c(4, 8),
-                    func_left = buttonkrmesempodsUI_left,
-                    func_right =buttonkrmesempodsUI_right
+                    func_left = buttonkrmesempodsmatadataUI_left,
+                    func_right =buttonkrmesempodsmatadataUI_right
 ) {
 
   
@@ -34,12 +34,12 @@ krmesempodsUI <- function(tabTitle ='员工',
 #'
 #' @examples
 #' buttonUI_left()
-buttonkrmesempodsUI_left <- function() {
+buttonkrmesempodsmatadataUI_left <- function() {
 
 
   res <- tagList(
 
-    shiny::actionButton(inputId = 'btn_krmesempods_view' , label = '预览表单数据'),
+    shiny::actionButton(inputId = 'btn_krmesempodsmatadata_view' , label = '预览表单数据'),
 
 
   )
@@ -58,9 +58,9 @@ buttonkrmesempodsUI_left <- function() {
 #'
 #' @examples
 #' buttonUI_right()
-buttonkrmesempodsUI_right <- function() {
+buttonkrmesempodsmatadataUI_right <- function() {
   res <- tagList(
-    tsui::uiScrollX(tsui::mdl_dataTable(id = 'krmesempods_view_data', label = '出口'))
+    tsui::uiScrollX(tsui::mdl_dataTable(id = 'krmesempodsmatadata_view_data', label = '出口'))
   )
   return(res)
 
